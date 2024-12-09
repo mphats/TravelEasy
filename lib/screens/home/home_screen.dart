@@ -8,6 +8,7 @@ import '../../base/res/media.dart';
 import '../../base/ticket_view.dart';
 import '../../base/ultils/all_json.dart';
 import '../../base/wedgets/app_double_text.dart';
+import '../../base/wedgets/heading_text.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -38,8 +39,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         Text("Good morning", style: AppStyles.headLineStyle3
                         ),
                         SizedBox(height: 5,),
-                        Text("Book Tickets", style: AppStyles.headLineStyle1
-                        ),
+                          HeadingText(text: 'Book Tickets', isColor: false),
+
                       ],
                    ),
                    Container(
