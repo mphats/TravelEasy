@@ -193,7 +193,16 @@ class Profile extends StatelessWidget {
                   //divider
                   Divider(color: Colors.grey.shade300,),
                   SizedBox(height: 4,),
-                  Text('How to get more miles',style: AppStyles.textStyle.copyWith(color: AppStyles.primaryColor,))
+                  InkWell(
+                    onTap: (){
+                      print('Tapped');
+                    },
+                      child: Text('How to get more miles',
+                          style: AppStyles.textStyle.copyWith(
+                              color: AppStyles.primaryColor,
+                              fontWeight: FontWeight.w500)
+                      )
+                  )
                 ],
               ),
             ),
