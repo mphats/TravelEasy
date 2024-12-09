@@ -165,7 +165,11 @@ class Profile extends StatelessWidget {
                       AppColumnTextLayout(topText: 'Airline BT', bottomText: 'Received from', textAlign: CrossAxisAlignment.end, isColor: false,),
                     ],
                   ),
-                  SizedBox(height: 25,),
+                  SizedBox(height: 4,),
+                  //divider
+                  Divider(color: Colors.grey.shade300,),
+                  SizedBox(height: 4,),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -173,14 +177,23 @@ class Profile extends StatelessWidget {
                       AppColumnTextLayout(topText: 'Sokotech', bottomText: 'Received from', textAlign: CrossAxisAlignment.end, isColor: false,),
                     ],
                   ),
-                  SizedBox(height: 25,),
+                  SizedBox(height: 4,),
+                  //divider
+                  Divider(color: Colors.grey.shade300,),
+                  SizedBox(height: 4,),
+
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       AppColumnTextLayout(topText: '52 340', bottomText: 'Miles', textAlign: CrossAxisAlignment.start, isColor: false,),
                       AppColumnTextLayout(topText: 'DBeskal', bottomText: 'Received from', textAlign: CrossAxisAlignment.end, isColor: false,),
                     ],
-                  )
+                  ),
+                  SizedBox(height: 4,),
+                  //divider
+                  Divider(color: Colors.grey.shade300,),
+                  SizedBox(height: 4,),
+                  Text('How to get more miles',style: AppStyles.textStyle.copyWith(color: AppStyles.primaryColor,))
                 ],
               ),
             ),
