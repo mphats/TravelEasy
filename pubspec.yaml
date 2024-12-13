@@ -39,11 +39,13 @@ dependencies:
   fluentui_icons: ^1.0.0
   barcode_widget: ^2.0.4
   flutter_launcher_icons: ^0.14.1
+  get: ^4.6.6
 
 flutter_launcher_icons:
   android: true
   ios: true
   image_path: 'assets/images/logo.png'
+
 
 #dev_dependencies:
  # flutter_test:

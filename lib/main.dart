@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:ticket_app/base/bottom_nav_bar.dart';
 import 'package:ticket_app/base/res/app_routes.dart';
 import 'package:ticket_app/screens/home/all_hotels.dart';
@@ -15,11 +16,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
 
-        AppRoutes.homePage:(context)=> const BottomNavBar(),
+        AppRoutes.homePage:(context)=> BottomNavBar(),
         AppRoutes.allTickets:(context) => const AllTickets(),
         AppRoutes.ticketScreen:(context) => const TicketScreen(),
         AppRoutes.allHotels:(context) => const AllHotels(),
