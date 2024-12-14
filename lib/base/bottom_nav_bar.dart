@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
-import 'package:ticket_app/controller/bottom_nav_controller.dart';
-import 'package:ticket_app/controller/bottom_nav_provider.dart';
+import 'package:ticket_app/provider/bottom_nav_provider.dart';
 import 'package:ticket_app/screens/profile/profile.dart';
 import 'package:ticket_app/screens/search/search_screen.dart';
 import 'package:ticket_app/screens/ticket/ticket_screen.dart';
