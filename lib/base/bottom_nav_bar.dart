@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:ticket_app/controller/bottom_nav_controller.dart';
+import 'package:ticket_app/controller/bottom_nav_provider.dart';
 import 'package:ticket_app/screens/profile/profile.dart';
 import 'package:ticket_app/screens/search/search_screen.dart';
 import 'package:ticket_app/screens/ticket/ticket_screen.dart';
 
 import '../screens/home/home_screen.dart';
 
-class BottomNavBar extends StatelessWidget {
+class BottomNavBar extends ConsumerWidget {
   BottomNavBar({super.key});
-
-  final BottomNavController controller = Get.put(BottomNavController());
 
   final appScreens = [
     const HomeScreen(),
@@ -21,15 +21,14 @@ class BottomNavBar extends StatelessWidget {
   ];
 
   @override
-  Widget build(BuildContext context) {
-
-    return Obx((){
+  Widget build(BuildContext context, WidgetRef ref) {
+      var selectedIndex = ref.watch(bottomNavBarNotifierProvider);
       return Scaffold(
 
-        body: appScreens[controller.selectedIndex.value],
+        body: appScreens[selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
-            currentIndex: controller.selectedIndex.value,
-            onTap: controller.onItemTapped,
+            currentIndex: selectedIndex,
+            onTap: ref.watch(bottomNavBarNotifierProvider.notifier).onItemTapped,
             selectedItemColor: Colors.blueGrey,
             unselectedItemColor: const Color(0xFF526400),
             showSelectedLabels: false,
@@ -40,6 +39,6 @@ class BottomNavBar extends StatelessWidget {
               BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
             ]),
       );
-    });
+
   }
 }
